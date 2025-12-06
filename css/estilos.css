@@ -53,11 +53,18 @@ body {
 }
 
 .another-body h1,
-.another-body h2,
-.another-body h3 {
+.another-body h2 {
     font-weight: var(--font-weight-text);
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.another-body h1 {
+    font-size: 3rem;
+}
+
+.another-body h2 {
+    font-size: 2rem;
 }
 
 .another-body main {
@@ -67,6 +74,8 @@ body {
 
 body p {
     padding-bottom: 1rem;
+    font-size: medium;
+    font-weight: var(--font-weight-text);
 }
 
 main {
@@ -138,6 +147,22 @@ main ul li ul {
     margin-bottom: 1rem;
 }
 
+.intro {
+    font-size: x-large;
+    font-weight: var(--font-weight-text);
+    margin-bottom: 2rem;
+}
+
+.icon::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: text-bottom;
+}
 
 /* *************************************** */
 /* *************** Headers *************** */
@@ -198,7 +223,7 @@ nav a:hover {
     color: var(--color-link-hover);
 }
 
-#home-link {
+.home-link {
     font-size: 32px;
     font-weight: var(--font-weight-site-name);
     color: var(--color-text-over-black);
@@ -207,18 +232,12 @@ nav a:hover {
     gap: 5px;
 }
 
-#home-link:hover {
+.home-link:hover {
     color: var(--color-link-hover);
 }
 
-#home-link::before {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
+.home-link::before {
     background-image: url('../img/isologo-white.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 /* *************************************** */
@@ -251,6 +270,7 @@ footer a:hover {
     display: flex;
     flex-direction: row;    
     list-style: none;
+    padding-bottom: 1rem;
 }
 
 .privacy-link::before,
@@ -337,7 +357,6 @@ footer abbr {
     height: auto;
 }
 
-
 /* *************************************** */
 /* *********** Artículo del mes ********** */
 
@@ -353,4 +372,85 @@ footer abbr {
     font-size: 14px;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.creative-cite {
+    font-weight: var(--font-weight-cite);
+    font-style: italic;
+}
+
+/* *************************************** */
+/* *************** Talleres ************** */
+
+.table-wrapper {
+    width: 100%;
+}
+
+.table-wrapper table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-weight: var(--font-weight-text); 
+}
+
+.table-wrapper caption {
+    background-color: var(--color-table-bg);
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    font-weight: var(--font-weight-table);  
+    border-left: 1px solid var(--color-borders);
+    border-right: 1px solid var(--color-borders);
+    border-top: 1px solid var(--color-borders);
+}
+
+.table-wrapper th {
+    background-color: var(--color-table-bg);
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    font-weight: var(--font-weight-table); 
+    border-left: 1px solid var(--color-borders);
+    border-right: 1px solid var(--color-borders);
+    border-top: 1px solid var(--color-borders);
+}
+
+
+
+.table-wrapper td{
+    width: fit-content;
+    border: 1px solid var(--color-borders);
+    padding: 0.5rem;
+}
+
+.table-wrapper caption {
+    font-size: xx-large;
+}
+
+.table-wrapper th {
+    text-align: left;
+}
+
+.cat-date::before {
+    background-image: url('../img/icon-calendar.svg');
+}
+
+.cat-cooker::before {
+    background-image: url('../img/icon-chef-hat.svg');
+}
+
+.cat-country::before {
+    background-image: url('../img/icon-country.svg');
+}
+
+.cat-activity::before {
+    background-image: url('../img/icon-recipe.svg');
+}
+
+.cat-level::before {
+    background-image: url('../img/icon-level.svg');
+}
+
+.cat-time::before {
+    background-image: url('../img/icon-clock.svg');
+}
+
+tfoot {
+    font-size: small;
 }
