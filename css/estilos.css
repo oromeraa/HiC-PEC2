@@ -94,12 +94,56 @@ main {
     padding-left: 1rem;
 }
 
+main a {
+    color: var(--color-link);
+    text-decoration: 1px dotted underline;
+    text-underline-offset: 4px;
+}
+
+main a:hover {
+    color: var(--color-link);   
+    height: 1;
+    text-decoration: 1px solid underline;
+}
+
+figure {
+    padding-bottom: 1rem;
+}
+
+figure img,
+figure iframe {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+figcaption {
+    font-size: small;
+    text-align: center;
+}
+
+main ul {
+    list-style: square;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+main ul li ul {
+    list-style: circle;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
 
 /* *************************************** */
 /* *************** Headers *************** */
 header {
     width: 100vw;
-    height: 10rem;
+    height: 8rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
 
@@ -181,7 +225,7 @@ nav a:hover {
 /* *************** Footers *************** */
 footer {
     width: 100vw;
-    height: 10rem;
+    height: 8rem;
 
     display: flex;
     flex-direction: column;
@@ -219,16 +263,6 @@ footer a:hover {
     font-weight: var(--font-weight-site-name);
 }
 
-p a {
-    color: var(--color-link);
-    text-decoration: 1px dotted underline;
-}
-
-p a:hover {
-    color: var(--color-link-hover);
-    height: 1;
-    text-decoration: 1px solid underline;
-}
 
 footer abbr {
     text-decoration: none;
