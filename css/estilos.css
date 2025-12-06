@@ -337,25 +337,32 @@ footer abbr {
 }
 
 #index-body h1 {
-    font-size: 180px;
-    height: 1;
+    font-size: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #index-body h2 {
     font-size: 50px;
-    margin-bottom: 2rem;
-    height: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
 }
 
 #index-body p {
     padding-bottom: 5px;
-    height: 1;
 }
 
-#index-logo {
+#index-body main h1::before {    
+    content: "";
+    display: block;
     width: 100px;
-    height: auto;
+    height: 100px;
+    background-size: contain;
+    background-image: url('../img/isologo-white.svg');
 }
+
 
 /* *************************************** */
 /* *********** Artículo del mes ********** */
@@ -410,8 +417,6 @@ footer abbr {
     border-right: 1px solid var(--color-borders);
     border-top: 1px solid var(--color-borders);
 }
-
-
 
 .table-wrapper td{
     width: fit-content;
