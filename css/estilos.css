@@ -1,0 +1,322 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* Variabless */
+:root {
+    --negro: rgb(23, 23, 23);
+    --verde: rgb(218, 245,9);
+    --blanco: rgb(255, 255, 255);
+    --negro-modificado: rgb(23, 23, 23, 0.1);
+    --transparente: rgba(0, 0, 0, 0);
+
+    --color-text: var(--negro);
+    --color-header-bg: var(--negro);
+    --color-footer-bg: var(--negro);
+    --color-article-bg: var(--negro);
+    --color-borders: var(--negro);
+
+    --color-link-hover: var(--verde);
+    --color-footer-hover: var(--verde);
+    --color-submit-button: var(--verde);
+
+    --color-text-over-black: var(--blanco);
+
+    --color-table-bg: var(--negro-modificado); 
+
+    --font-weight-text: 400;
+    --font-weight-title: 400;
+    --font-weight-cite: 700;
+    --font-weight-table: 700;
+    --font-weight-site-name: 900;
+    --font-weight-p-index: 900;
+}
+
+/* *************************************** */
+/* *************** Comunes *************** */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: var(--font-weight-text);
+}
+
+.another-body h1,
+.another-body h2,
+.another-body h3 {
+    font-weight: var(--font-weight-text);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.another-body main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+body p {
+    padding-bottom: 1rem;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+/* *************************************** */
+/* *************** Headers *************** */
+header {
+    width: 100vw;
+    height: 10rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--color-text-over-black);
+    background-color: var(--color-header-bg);
+}
+
+nav {
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-options li.active {
+    position: relative;
+}
+
+.nav-options li.active::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--verde);
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    transform: translateX(-50%);
+}
+
+nav a {
+    color: var(--color-text-over-black);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--color-link-hover);
+}
+
+#home-link {
+    font-size: 32px;
+    font-weight: var(--font-weight-site-name);
+    color: var(--color-text-over-black);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#home-link:hover {
+    color: var(--color-link-hover);
+}
+
+#home-link::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/isologo-white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* *************************************** */
+/* *************** Footers *************** */
+footer {
+    width: 100vw;
+    height: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    background-color: var(--color-footer-bg);
+    color: var(--color-text-over-black);
+}
+
+footer a {
+    color: var(--color-text-over-black);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-footer-hover);
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;    
+    list-style: none;
+}
+
+.privacy-link::before,
+.privacy-link::after {
+    content: " · ";
+    display: inline-block;
+    color: var(--color-text-over-black);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: var(--font-weight-site-name);
+}
+
+p a {
+    color: var(--color-link);
+    text-decoration: 1px dotted underline;
+}
+
+p a:hover {
+    color: var(--color-link-hover);
+    height: 1;
+    text-decoration: 1px solid underline;
+}
+
+footer abbr {
+    text-decoration: none;
+    cursor: help;
+}
+
+
+/* *************************************** */
+/* **************** Inicio *************** */
+#index-body {
+    background-image: url('../img/home-bg.jpg');
+    background-size: cover;
+    overflow: hidden;
+    color: var(--color-text-over-black);
+}
+
+#index-body main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#index-body a {
+    color: var(--color-text-over-black);
+    text-decoration: none;
+}
+
+#index-body a:hover {
+    color: var(--color-link-hover);
+}
+
+#index-body header {
+    background-color: var(--transparente);
+    font-size: x-large;
+    padding-top: 1;
+}
+
+#index-body footer {
+    background-color: var(--transparente);
+    height: 20vh;
+    align-items: center;
+}
+
+#index-body nav {
+    align-items: center;
+}
+
+#index-body header ul {    
+    gap: 2rem;
+}
+
+#index-body h1 {
+    font-size: 180px;
+    height: 1;
+}
+
+#index-body h2 {
+    font-size: 50px;
+    margin-bottom: 2rem;
+    height: 1;
+}
+
+#index-body p {
+    padding-bottom: 5px;
+    height: 1;
+}
+
+#index-logo {
+    width: 100px;
+    height: auto;
+}
+
+
+/* *************************************** */
+/* *********** Artículo del mes ********** */
+
+#article {
+    font-size: 14px;
+    background-color: var(--negro);
+    color: var(--color-text-over-black);
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#article-date {
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
