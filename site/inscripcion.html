@@ -22,6 +22,111 @@
         </header>
 
         <main>
+            <div class="content-wrapper">
+                <h1>Inscripción a los talleres</h1>
+
+                <p class="intro">Rellene el formulario siguiente para inscribirse en nuestros talleres. Las plazas son limitadas y se confirmarán por orden e inscripción. Una vez recibida la solicitud, contactaremos con usted por correo electrónico para darle todos los detalles del taller y las instrucciones de pago.</p>
+            </div>
+
+            <div class="page-container form-wrapper">
+                <p>Los campos señalados con <span>*</span> son obligatorios.</p>
+                <form class="registration-form" action="">
+                    <fieldset>
+                        <legend>DATOS PERSONALES</legend>
+                        
+                        <div class="form-group-flex">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            
+                            <label for="apellidos">Apellidos *</label>
+                            <input type="text" id="apellidos" name="apellidos" required>
+                        </div>
+
+                        <div class="form-group-flex">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                            
+                            <label for="telefono">Teléfono de contacto *</label>
+                            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9,}" title="Introduce un número de teléfono válido (mínimo 9 dígitos).">
+                        </div>
+
+                        <div class="form-group-flex">
+                            <label for="nacimiento">Fecha de nacimiento *</label>
+                            <input type="date" id="nacimiento" name="nacimiento" required placeholder="dd/mm/aaaa">
+                            
+                            <label for="nacionalidad">Nacionalidad *</label>
+                            <input type="text" id="nacionalidad" name="nacionalidad" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>INFORMACIÓN SOBRE LA INSCRIPCIÓN</legend>
+
+                        <div class="form-group-flex">
+                            <label for="nivel">Nivel de experiencia culinaria *</label>
+                            <select id="nivel" name="nivel" required>
+                                <option value="">Seleccione su nivel</option>
+                                <option value="iniciacion">Iniciación</option>
+                                <option value="intermedio">Intermedio</option>
+                                <option value="avanzado">Avanzado</option>
+                            </select>
+                            
+                            <label for="idioma">Idioma preferido del taller *</label>
+                            <select id="idioma" name="idioma" required>
+                                <option value="">Seleccione un idioma</option>
+                                <option value="es">Español</option>
+                                <option value="ca">Catalán</option>
+                                <option value="en">Inglés</option>
+                            </select>
+                        </div>
+
+                        <label for="taller">Seleccione un taller *</label>
+                        <select id="taller" name="taller" required>
+                            <option value="">Seleccione un taller</option>
+                            </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>PROPONGA UN NUEVO TALLER</legend>
+                        <p>Si tiene alguna idea para un nuevo taller, explíquenosla.</p>
+
+                        <label for="titulo_propuesta">Título o tema del taller</label>
+                        <input type="text" id="titulo_propuesta" name="titulo_propuesta">
+
+                        <label for="descripcion_propuesta">Descripción breve de la propuesta</label>
+                        <textarea id="descripcion_propuesta" name="descripcion_propuesta" rows="4" placeholder="Explique qué le gustaría aprender o compartir en este taller..."></textarea>
+
+                        <label for="pais_origen">País o región de origen</label>
+                        <input type="text" id="pais_origen" name="pais_origen" placeholder="Ejemplo: Vietnam, Mediterráneo, Argentina...">
+                        
+                        <label>¿Conoce a algún chef o persona que podría impartirlo?</label>
+                        <input type="text" name="chef_sugerido">
+
+                        <label>Nivel de dificultad propuesto</label>
+                        <div class="radio-group">
+                            <input type="radio" id="propuesta_iniciacion" name="nivel_propuesta" value="iniciacion">
+                            <label for="propuesta_iniciacion">Iniciación</label><br>
+                            
+                            <input type="radio" id="propuesta_intermedio" name="nivel_propuesta" value="intermedio">
+                            <label for="propuesta_intermedio">Intermedio</label><br>
+                            
+                            <input type="radio" id="propuesta_avanzado" name="nivel_propuesta" value="avanzado">
+                            <label for="propuesta_avanzado">Avanzado</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="legal-section">
+                        <p class="data-protection-info">
+                            INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE DESCUBRIR. Finalidades: recogida de datos para la inscripción en los talleres de Descubrir. Legitimación: consentimiento del interesado. Destinatarios: no están previstas cesiones de datos a terceros, salvo por obligación legal. Derechos: puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a info@descubrir.eu. Información adicional: puede ampliar la información en el enlace de Aviso Legal y Política de privacidad.
+                        </p>
+                        
+                        <input type="checkbox" id="acepto_legal" name="acepto_legal" required>
+                        <label for="acepto_legal">He leído y acepto la política de privacidad *</label>
+                    </div>
+                    
+                    <input type="submit" value="Inscribirme">
+                </form>
+            </div>
 
         </main>
         

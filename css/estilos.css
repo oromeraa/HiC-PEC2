@@ -363,7 +363,6 @@ footer abbr {
     background-image: url('../img/isologo-white.svg');
 }
 
-
 /* *************************************** */
 /* *********** Artículo del mes ********** */
 
@@ -458,4 +457,11 @@ footer abbr {
 
 tfoot {
     font-size: small;
+}
+
+/* *************************************** */
+/* ************* Inscripción ************* */
+
+.form-wrapper p span {
+    color: red;
 }
