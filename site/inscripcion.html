@@ -38,36 +38,36 @@
                         <div class="form-item-group">
                             <div class="form-item">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre" name="nombre" required="true" class="form-control" placeholder=" ">
+                                <input type="text" id="nombre" name="nombre" required class="form-control" placeholder=" ">
                             </div>
                             
                             <div class="form-item">
                                 <label for="apellidos">Apellidos</label>
-                                <input type="text" id="apellidos" name="apellidos" required="true" class="form-control" placeholder=" ">
+                                <input type="text" id="apellidos" name="apellidos" required class="form-control" placeholder=" ">
                             </div>
                         </div>
 
                         <div class="form-item-group">
                             <div class="form-item">
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" id="email" name="email" required="true" class="form-control" placeholder=" ">
+                                <input type="email" id="email" name="email" required class="form-control" placeholder=" ">
                             </div>
                             
                             <div class="form-item">
                                 <label for="telefono">Teléfono de contacto</label>
-                                <input type="tel" id="telefono" name="telefono" required="true" pattern="[0-9]{9,}" title="Introduce un número de teléfono válido (mínimo 9 dígitos)." class="form-control" placeholder=" ">
+                                <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9,}" class="form-control" placeholder=" ">
                             </div>
                         </div>
 
                         <div class="form-item-group">
                             <div class="form-item">
                                 <label for="nacimiento">Fecha de nacimiento</label>
-                                <input type="date" id="nacimiento" name="nacimiento" required="true" placeholder="dd/mm/aaaa" class="form-control">
+                                <input type="date" id="nacimiento" name="nacimiento" required class="form-control">
                             </div>
                             
                             <div class="form-item">
                                 <label for="nacionalidad">Nacionalidad</label>
-                                <input type="text" id="nacionalidad" name="nacionalidad" required="true" class="form-control" placeholder=" ">
+                                <input type="text" id="nacionalidad" name="nacionalidad" required class="form-control" placeholder=" ">
                             </div>
                         </div>
                     </fieldset>
@@ -78,8 +78,8 @@
                         <div class="form-item-group">
                             <div class="form-item">
                                 <label for="nivel">Nivel de experiencia culinaria</label>
-                                <select id="nivel" name="nivel" required="true" class="form-control select-control">
-                                    <option value="" selected="true">Seleccione su nivel</option>
+                                <select id="nivel" name="nivel" required class="form-control select-control">
+                                    <option value="" selected>Seleccione su nivel</option>
                                     <option value="iniciacion">Iniciación</option>
                                     <option value="intermedio">Intermedio</option>
                                     <option value="avanzado">Avanzado</option>
@@ -88,28 +88,28 @@
                             
                             <div class="form-item">
                                 <label for="idioma">Idioma preferido del taller</label>
-                                <select id="idioma" name="idioma" required="true" class="form-control select-control">
-                                    <option value="" selected="true">Seleccione un idioma</option>
+                                <select id="idioma" name="idioma" required class="form-control select-control">
+                                    <option value="" selected>Seleccione un idioma</option>
                                     <option value="es">Español</option>
                                     <option value="ca">Catalán</option>
                                     <option value="en">Inglés</option>
-                            </select>
-                        </div>
+                                </select>
+                            </div>                        
 
-                        <div class="form-item">
-                            <label for="taller">Seleccione un taller</label>
-                            <select id="taller" name="taller" required="true" class="form-control select-control">
-                                <option value="" selected="true">Seleccione un taller</option>
-                                <option value="ramen-invierno">Ramen de invierno: caldo y técnicas (03/12/2025)</option>
-                                <option value="navidad-mediterranea">Cocina de Navidad mediterránea (05/12/2025)</option>
-                                <option value="postres-navidenos">Recetas navideñas italianas (07/12/2025)</option>
-                                <option value="catas-orientales">Catas de Oriente Medio para fiestas (10/12/2025)</option>
-                                <option value="dulces-festivos">Dulces para las fiestas (12/12/2025)</option>
-                                <option value="nordica-navidad">Tradición nórdica de Navidad (20/12/2025)</option>
-                                <option value="festiva-mexicana">Cocina festiva mexicana (27/12/2025)</option>
-                            </select>
-                        </div>
-                        
+                            <div class="form-item">
+                                <label for="taller">Seleccione un taller</label>
+                                <select id="taller" name="taller" required class="form-control select-control">
+                                    <option value="" selected>Seleccione un taller</option>
+                                    <option value="ramen-invierno">Ramen de invierno: caldo y técnicas (03/12/2025)</option>
+                                    <option value="navidad-mediterranea">Cocina de Navidad mediterránea (05/12/2025)</option>
+                                    <option value="postres-navidenos">Recetas navideñas italianas (07/12/2025)</option>
+                                    <option value="catas-orientales">Catas de Oriente Medio para fiestas (10/12/2025)</option>
+                                    <option value="dulces-festivos">Dulces para las fiestas (12/12/2025)</option>
+                                    <option value="nordica-navidad">Tradición nórdica de Navidad (20/12/2025)</option>
+                                    <option value="festiva-mexicana">Cocina festiva mexicana (27/12/2025)</option>
+                                </select>
+                            </div>
+                        </div>                        
                     </fieldset>
 
                     <fieldset id="propose-workshop">
@@ -125,29 +125,29 @@
                             <textarea id="descripcion-propuesta" name="descripcion-propuesta" rows="4" placeholder="Explique qué le gustaría aprender o compartir en este taller..." class="form-control"></textarea>                       
                         </div>
                         <div class="form-item">        
-                            <label for="pais_origen">País o región de origen</label>
+                            <label for="pais-origen">País o región de origen</label>
                             <input type="text" id="pais-origen" name="pais-origen" placeholder="Ejemplo: Vietnam, Mediterráneo, Argentina..." class="form-control">                    
                         </div>
                         <div class="form-item">             
-                            <label>¿Conoce a algún chef o persona que podría impartirlo?</label>
-                            <input type="text" name="chef_sugerido" class="form-control" placeholder=" ">               
+                            <label for="chef-sugerido">¿Conoce a algún chef o persona que podría impartirlo?</label>
+                            <input type="text" id="chef-sugerido" name="chef-sugerido" class="form-control" placeholder=" ">               
                         </div>
                         <div class="form-item">  
                             <label>Nivel de dificultad propuesto</label>
                             <div class="radio-group">
                                 <div class="radio-option">
-                                    <input type="radio" id="propuesta-iniciacion" name="nivel_propuesta" value="iniciacion">
-                                    <label for="propuesta_iniciacion">Iniciación</label>
+                                    <input type="radio" id="propuesta-iniciacion" name="nivel-propuesta" value="iniciacion">
+                                    <label for="propuesta-iniciacion">Iniciación</label>
                                 </div>
                                 
                                 <div class="radio-option">
-                                    <input type="radio" id="propuesta-intermedio" name="nivel_propuesta" value="intermedio">
-                                    <label for="propuesta_intermedio">Intermedio</label>
+                                    <input type="radio" id="propuesta-intermedio" name="nivel-propuesta" value="intermedio">
+                                    <label for="propuesta-intermedio">Intermedio</label>
                                 </div>
                                 
                                 <div class="radio-option">
-                                    <input type="radio" id="propuesta-avanzado" name="nivel_propuesta" value="avanzado">
-                                    <label for="propuesta_avanzado">Avanzado</label>
+                                    <input type="radio" id="propuesta-avanzado" name="nivel-propuesta" value="avanzado">
+                                    <label for="propuesta-avanzado">Avanzado</label>
                                 </div>
                             </div>                          
                         </div>
@@ -156,7 +156,7 @@
                     <fieldset id="legal-info">
                         <p>INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE DESCUBRIR. <strong>Finalidades</strong>: recogida de datos para la inscripción en los talleres de Descubrir. <strong>Legitimación</strong>: consentimiento del interesado. <strong>Destinatarios</strong>: no están previstas cesiones de datos a terceros, salvo por obligación legal. Derechos: puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <a href="mailto:info@descubrir.eu">info@descubrir.eu</a>. <strong>Información adicional</strong>: puede ampliar la información en el enlace de <a href="#">Aviso Legal</a> y <a href="">Política de privacidad</a>.</p>
                         
-                        <input type="checkbox" id="acepto-legal" name="acepto-legal" required="true">
+                        <input type="checkbox" id="acepto-legal" name="acepto-legal" required>
                         <label for="acepto-legal">He leído y acepto la política de privacidad <span class="required-field">*</span></label>
                     </fieldset>
                     
