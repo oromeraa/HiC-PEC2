@@ -111,7 +111,7 @@ main a {
 
 main a:hover {
     color: var(--color-link);   
-    height: 1;
+    height: fit-content;
     text-decoration: 1px solid underline;
 }
 
@@ -319,7 +319,7 @@ footer abbr {
 #index-body header {
     background-color: var(--transparente);
     font-size: x-large;
-    padding-top: 1;
+    padding-top: 1rem;
 }
 
 #index-body footer {
@@ -389,46 +389,39 @@ footer abbr {
 /* *************** Talleres ************** */
 
 .table-wrapper {
-    width: 100%;
+    width: 1140px;
 }
 
-.table-wrapper table {
+table {
     width: 100%;
-    table-layout: fixed;
+    table-layout: auto;
     border-collapse: collapse;
-    font-weight: var(--font-weight-text); 
 }
 
-.table-wrapper caption {
-    background-color: var(--color-table-bg);
-    padding: 1rem 0.5rem 1rem 0.5rem;
-    font-weight: var(--font-weight-table);  
-    border-left: 1px solid var(--color-borders);
-    border-right: 1px solid var(--color-borders);
-    border-top: 1px solid var(--color-borders);
-}
-
-.table-wrapper th {
-    background-color: var(--color-table-bg);
-    padding: 1rem 0.5rem 1rem 0.5rem;
-    font-weight: var(--font-weight-table); 
-    border-left: 1px solid var(--color-borders);
-    border-right: 1px solid var(--color-borders);
-    border-top: 1px solid var(--color-borders);
-}
-
-.table-wrapper td{
-    width: fit-content;
+table th,
+table td, 
+table caption {
     border: 1px solid var(--color-borders);
-    padding: 0.5rem;
+    font-weight: var(--font-weight-text); 
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    white-space: nowrap;
+    text-align: left;
 }
 
-.table-wrapper caption {
+thead th,
+table caption {
+    background-color: var(--color-table-bg);
+    font-weight: var(--font-weight-table); 
+}
+
+table caption {
+    text-align: center;
+    border-bottom: none;
     font-size: xx-large;
 }
 
-.table-wrapper th {
-    text-align: left;
+tfoot td{
+    font-size: smaller;
 }
 
 .cat-date::before {
@@ -455,9 +448,6 @@ footer abbr {
     background-image: url('../img/icon-clock.svg');
 }
 
-tfoot {
-    font-size: small;
-}
 
 /* *************************************** */
 /* ************* Inscripción ************* */
